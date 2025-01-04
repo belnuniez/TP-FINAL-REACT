@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import '../Inspo-section/Inspo-section.css'
 
 // Importar imagenes
-import Foto1 from '../assets/Popular1.png'
-import Foto2 from '../assets/Popular2.png'
-import Foto3 from '../assets/Popular3.png'
-import Foto4 from '../assets/Popular4.png'
+import Foto1 from '../assets/popular1.png';
+import Foto2 from '../assets/popular2.png';
+import Foto3 from '../assets/popular3.png';
+import Foto4 from '../assets/popular4.png';
 
 const Inspo = () => {
   const [searchTerm, setSearchTerm] = useState('') // almacena el texto que se escribe en el input
