@@ -1,0 +1,130 @@
+
+.recipe-section{
+    display: flex ;
+    flex-wrap: wrap; 
+    gap: 40px;
+    background-color: #f4612d;
+    justify-content: center; /* Centra los elementos en el eje horizontal */
+    align-items: center; /* Centra los elementos en el eje vertical */
+    margin-bottom: 50px;
+  }
+
+ 
+  
+  .contenedora-history .title {
+    color: white;
+    margin-bottom: 0px;
+  }
+
+  .contenedora-history {
+    background-color: #f4612d;
+  }
+
+  .no-recipes{
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    width: 100%;
+  }
+  
+  .recipe-card{
+    width: 320px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .recipe-title{
+    font-weight: 58px bold;
+    font-size: 25px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #6f00ff;
+  }
+  
+  h2{
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+  
+  .recipe-main-info{
+    width: 100%;
+    border-bottom: 3px solid;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    background-color: #f8f8f8;
+    border-bottom: 3px solid #e0e0e0;
+  }
+  
+  .recipe-text{
+    display: flex;
+    padding-top: 30px;
+    height: 170px;
+  }
+  
+  .info{
+    margin-bottom: 10px;
+    color: #444;
+    height: 170px;
+  }
+  .recipe-text-left {
+    margin-right: 20px;
+  }
+  
+  .recipe-text-right div{
+    padding-bottom: 10px;
+  }
+  
+  .pasos{
+    text-align: start;
+  }
+  
+  .delete-btn{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+  }
+  
+  button {
+    background-color: #9e9e9e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .delete-btn button:hover {
+    background-color: #242424;
+  }
+
+  .subtitle {
+    color: #6f00ff;
+  }
+  
+  
+  @media (max-width: 800px) {
+
+    /* .recipe-section{
+     
+    } */
+
+    .contenedora-history h2 {
+      font-size: 1.4rem;
+    }
+
+  
+  
+  }

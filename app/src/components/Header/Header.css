@@ -1,0 +1,168 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  font-size: 25px;
+  font-weight: 55px;
+}
+
+  
+  header ul {
+    list-style: none;
+    display: flex;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    gap: 2rem;
+  }
+  
+  /* ANIMACION HOVER NAV */
+
+  header ul li {
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    color: #000; /* Color base del texto */
+    list-style: none; /* Eliminar estilos de lista si es necesario */
+    cursor: pointer; /* Cambiar el cursor a mano */
+  }
+
+
+  header li a {
+    text-decoration: none; /* Quitar subrayado predeterminado */
+    color: #000; /* Color base del texto */
+    display: inline-block; /* Necesario para que el pseudo-elemento funcione */
+}
+  
+  header li a:hover {
+    color: #6f00ff; /* Cambiar el color del texto */
+  }
+  
+  header li a::after {
+    content: ''; /* Pseudo-elemento vacío para el subrayado */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0; /* Comienza invisible */
+    height: 2px; /* Grosor de la línea */
+    background-color: #6f00ff; /* Color del subrayado */
+    transition: width 0.4s ease; /* Animación suave */
+  }
+  
+  header li a:hover::after {
+    width: 100%; /* Ancho completo al hacer hover */
+  }
+  
+  /* ---------------------------------------------------*/
+
+
+  .Logo {
+    margin-left: 50px;
+    height: 70px;
+  }
+
+  .Logo2 {
+    display: none;
+  }
+  
+  header .cta {
+    background-color: #f4612d; /* Color inicial */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+    margin-right: 65px;
+  }
+  
+  header .cta:hover {
+    background-color: #6f00ff; /* Cambia a violeta al hacer hover */
+    color: white; /* Mantén el texto blanco */
+    transform: scale(1.1); /* Agranda el botón al 110% */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .abrir-menu,
+  .cerrar-menu {
+    display: none;
+  }
+
+
+/* MEDIA QUERIES 
+-----------------------*/
+
+  @media (max-width:1400px) {
+
+    .abrir-menu,
+    .cerrar-menu {
+      display: block;
+    }
+
+    .nav {
+      opacity: 0;
+      visibility: hidden;
+
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      gap: 2rem;
+      background-color: #f4612d;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      padding: 2rem;
+      box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+
+    }
+
+    .nav-visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .nav-list {
+      flex-direction: column;
+      align-items: end;
+    }
+
+    .nav-list li a {
+      color: #ffffff;
+    }
+
+    .burger-menu {
+      width: 40px;
+    }
+
+    .abrir-menu {
+      background-color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+   
+
+  
+  
+  }
+
+
+
+
+
+  @media (max-width: 700px) {
+
+    .Logo,
+    .cta {
+      display: none;
+    }
+
+    .Logo2 {
+      display: block;
+      margin-left: 20px;
+    }
+  }

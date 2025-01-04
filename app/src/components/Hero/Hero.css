@@ -1,0 +1,98 @@
+.Hero-contenedor {
+    background-image: url('../assets/fotoFondo.gif');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 100%; 
+}
+  
+.Hero{
+    text-align: left;
+    padding: 50px 20px;
+    color: #212121;
+    margin-left: 72px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.Subrayado {
+    color: #f4612d;
+    text-decoration: underline;
+}
+
+.Hero-parrafo {
+    font-size: 20px;
+    color: #898989;
+    margin: 20px 0px 25px 0px;
+    max-width: 30%;
+}
+
+
+.usuarios-contenedora {
+    display: flex;
+    margin-top: 25px;
+}
+
+.usuarios-activos {
+    margin-top: 12px;
+    margin-left: 20px;
+}
+
+.Hero-contenedor h1 {
+    font-size: 50px;
+}
+
+.download-botones {
+    margin-top: 3rem;
+}
+
+/* MEDIA QUERIES 
+-----------------------*/
+
+@media (max-width:1100px) {
+
+    .Hero{
+        text-align: left;
+        padding: 50px 20px;
+        color: #212121;
+        margin-left: 35px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .hero-contenedor {
+        margin-left: -20px;
+    }
+
+    .download-botones img {
+        width: 75%;
+    }
+
+    .Hero-contenedor h1 {
+        font-size: 40px;
+    }
+
+    .usuarios-contenedora img {
+        width: 50%;
+    }
+
+    .usuarios-contenedora {
+        display: block;
+    }
+
+    .Hero-contenedor {
+        background-image: url('../assets/fotoFondo-responsive.gif');
+    }
+
+    .usuarios-activos {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width:1100px) {
+
+    .Hero-parrafo {
+        font-size: 18px;
+        max-width: 80%;
+    }
+}

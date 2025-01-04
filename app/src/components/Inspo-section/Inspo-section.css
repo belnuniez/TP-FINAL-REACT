@@ -1,0 +1,248 @@
+
+/* Estilos generales */
+h2{
+    font-weight: 30px;
+    font-size: 35px;
+    margin-top: -40px;
+  }
+
+  .gallery-container h2 {
+    margin-bottom: -34px;
+  }
+  
+.span {
+  color: #f4612d;
+}
+
+.card-estilo {
+  background-color: #ffffff;
+  padding: 3rem 1rem;
+  border-radius: 5%;
+  margin: 1rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0px;
+}
+
+  .gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    background-color: #f6f6f6;
+  }
+  
+  .gallery {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  .gallery-item {
+    position: relative;
+    width: 350px;
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+    font-family: Poppins,sans-serif;
+    font-size: 1.2rem;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(0.9); /* Reduce el tamaño de la imagen al pasar el mouse */
+  }
+  
+  .gallery-item:hover .gallery-description {
+    opacity: 1; 
+    bottom: 0; 
+  }
+  
+  /* Estilo de las imágenes */
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    transition: transform 0.3s ease-in-out; /* Transición de la imagen */
+  }
+  
+  
+  /* Descripción oculta por defecto */
+  .gallery-description {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 97, 36, 0) 0%,       /* Transparente (inicio del degradado, más arriba) */
+      rgba(255, 97, 36, 0.4) 30%,   /* Color con baja opacidad */
+      rgba(255, 97, 36, 0.7) 60%,   /* Color intermedio con más opacidad */
+      rgba(255, 97, 36, 0.9) 80%,   /* Casi sólido cerca de la base */
+      rgba(255, 97, 36, 1) 100%     /* Color completamente sólido en la parte inferior */
+    );
+    color: white;
+    padding: 30px;
+    opacity: 0; /* Se mantiene oculta hasta el hover */
+    transition: opacity 0.3s ease, bottom 0.3s ease; /* Hace que la descripción se desplace y sea visible */
+}
+
+.parrafo {
+  margin-top: 160px;
+  font-size: 17px;
+  margin-right: 50px;
+}
+  
+  .read-more-btn {
+    margin-top: 10px;
+    font-size: 15px;
+    background-color: #ffffff;
+    color: #0c0c0c;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: none; 
+  }
+  
+  .gallery-item:hover .read-more-btn {
+    display: block; 
+  }
+  
+  .read-more-btn:hover {
+    background-color: #212121;
+    color: white; 
+  }
+  
+  
+  /* Estilo para el contenedor de la barra de búsqueda */
+  
+  .search-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .gallery-container h3{
+    font-size: 25px;
+    margin: 0px 0px 20px 0px;
+  }
+  
+  .search-container h2 {
+    margin-bottom: -10px;
+  }
+
+  /* ANIMACIÓN BUSCADOR */
+
+  .search-container  input {
+    max-width: 450px;
+    height: 40px;
+    background-color: #ffffff;
+    border: #0c0c0c;
+    padding: 10px 10px 10px 30px;
+    border-radius: 50px;
+    outline: none;
+    color: rgb(55, 55, 55);
+  }
+
+  .search-container input:focus {
+    animation: rotateShadow 2s infinite linear;
+  }
+  
+  @keyframes rotateShadow {
+    0% {
+      box-shadow: -2px -2px 8px 1px #aa00ff, 2px 2px 8px 1px #3700ff;
+    }
+    25% {
+      box-shadow: -2px 2px 8px 1px #aa00ff, 2px -2px 8px 1px #3700ff;
+    }
+    50% {
+      box-shadow: 2px 2px 8px 1px #aa00ff, -2px -2px 8px 1px #3700ff;
+    }
+    75% {
+      box-shadow: 2px -2px 8px 1px #aa00ff, -2px 2px 8px 1px #3700ff;
+    }
+    100% {
+      box-shadow: -2px -2px 8px 1px #aa00ff, 2px 2px 8px 1px #3700ff;
+    }
+  }
+  
+  .search-results {
+    width: 100%;
+    padding-top: 20px;
+  }
+  
+  .error-message {
+    color: #dc2626;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .search-results .gallery {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  h4{
+    font-size: 20px;
+  }
+  
+  .search-results p {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+/* ANIMACION ESTRELLAS RAITING */
+
+.rating {
+  display: inline-block;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  float: right;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.rating label:before {
+  content: '\2605';
+  font-size: 40px;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #6f00ff;
+  transition: color 0.3s;
+}
+
+
+  
+  /* MEDIA QUERIES 
+  ----------------------*/
+
+  @media (max-width: 768px) {
+
+    .search-container input {
+      width: 80%;
+    }
+
+    .gallery-container h2 {
+      font-size: 1.4rem;
+      max-width: 80%;
+  }
+
+    .gallery-item h3 {
+      font-size: 1rem;
+    }
+    
+}
